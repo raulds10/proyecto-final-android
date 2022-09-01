@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0b2f5a</color>
+    <color name="colorPrimaryDark">#0b2f5a</color>
+    <color name="colorAccent">#0b2f5a</color>
+
+    <color name="colorBlackLowOpacity">#7F000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorBackgroundPrimary">#FFFFFF</color>
+    <color name="colorBackgroundSecondary">#FFFFFA</color>
+    <color name="colorButtonFill">#0b2f5a</color>
+    <color name="colorButtonFill2">#2CB09D</color>
+    <color name="colorButtonFill3">#2A2A2A</color>
+    <color name="colorTextButton">#FFFFFF</color>
+    <color name="colorTextTitle">#0b2f5a</color>
+    <color name="colorTextSubtitle">#242b33</color>
+    <color name="colorTextBody1">#585f6f</color>
+    <color name="colorTextBody2">#1f3f66</color>
+    <color name="colorTextBody3">#787786</color>
+    <color name="colorTextBody4">#242B33</color>
+    <color name="colorTextBody5">#2e343c</color>
+    <color name="colorTextBody6">#229100</color>
+    <color name="colorTextBody7">#F50000</color>
+    <color name="colorTextBody8">#BF4907</color>
+    <color name="colorTextBody9">#2CB09D</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#B00020</color>
+    <color name="colorGreen">#02AC66</color>
+    <color name="colorGray">#979797</color>
+</resources>

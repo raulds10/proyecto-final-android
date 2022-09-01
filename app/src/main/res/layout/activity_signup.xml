@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_principal_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context=".ui.signup.SignupActivity">
+
+    <ProgressBar
+        android:id="@+id/pb_loading_signup"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:indeterminate="true"
+        android:scaleY="1.8"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_title_signup_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/avenirnextdemibold"
+        android:gravity="center"
+        android:text="@string/ingresar_datos"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/sv_signup_activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_signup_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_data_signup_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dni_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/usuario"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_usuario_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dni_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_apellido_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/nombre_completo"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_usuario_signup" />
+
+            <EditText
+                android:id="@+id/et_full_name_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textPersonName"
+                android:maxLength="60"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_apellido_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_nombre_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/altura_en_cm"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_full_name_signup" />
+
+            <EditText
+                android:id="@+id/et_altura_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_email_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/email"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_altura_signup" />
+
+            <EditText
+                android:id="@+id/et_email_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_fecha_nac_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/fecha_nac"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_email_signup" />
+
+            <EditText
+                android:id="@+id/et_fecha_nac_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="date"
+                android:maxLength="20"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fecha_nac_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_telefono_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/peso_en_kg"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_fecha_nac_signup" />
+
+            <EditText
+                android:id="@+id/et_peso_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_telefono_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_password_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/password"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_peso_signup" />
+
+            <EditText
+                android:id="@+id/et_pass_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password_signup_activity" />
+
+            <TextView
+                android:id="@+id/tv_repeat_password_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/repetir_password"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_pass_signup" />
+
+            <EditText
+                android:id="@+id/et_repeat_pass_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_repeat_password_signup_activity" />
+
+            <Button
+                android:id="@+id/btn_siguiente_signup_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_custom_background"
+                android:fontFamily="@font/avenirheavy"
+                android:text="@string/siguiente"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_repeat_pass_signup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

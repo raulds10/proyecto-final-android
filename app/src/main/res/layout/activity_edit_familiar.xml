@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context=".ui.menu.menu1.editarfamilia.EditFamiliarActivity">
+
+    <ProgressBar
+        android:id="@+id/pb_loading_edit_familiar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:indeterminate="true"
+        android:scaleY="1.8"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_title_edit_familiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/avenirnextdemibold"
+        android:gravity="center"
+        android:text="@string/editar_familiar"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_delete_edit_familiar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_edit_familiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_edit_familiar"
+        app:srcCompat="@drawable/img_trash" />
+
+    <ScrollView
+        android:id="@+id/sv_edit_familiar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_delete_edit_familiar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_data_edit_familiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_full_name_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/nombre_completo"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_full_name_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="textPersonName"
+                android:maxLength="60"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_full_name_edit_familiar" />
+
+            <TextView
+                android:id="@+id/tv_altura_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/altura_en_cm"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_full_name_edit_familiar" />
+
+            <EditText
+                android:id="@+id/et_altura_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_altura_edit_familiar" />
+
+            <TextView
+                android:id="@+id/tv_fecha_nac_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/fecha_nac"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_peso_edit_familiar" />
+
+            <TextView
+                android:id="@+id/tv_afecciones_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/afecciones"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_nueva_afeccion_edit_familiar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_fecha_nac_edit_familiar" />
+
+            <TextView
+                android:id="@+id/tv_nueva_afeccion_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/avenirheavy"
+                android:text="@string/nueva_afeccion"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_afecciones_edit_familiar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_afecciones_edit_familiar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_afecciones_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_afecciones_edit_familiar" />
+
+            <EditText
+                android:id="@+id/et_fecha_nac_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="date"
+                android:maxLength="20"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fecha_nac_edit_familiar" />
+
+            <TextView
+                android:id="@+id/tv_peso_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/avenirnextregular"
+                android:text="@string/peso_en_kg"
+                android:textColor="@color/colorTextBody5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_altura_edit_familiar" />
+
+            <EditText
+                android:id="@+id/et_peso_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:backgroundTint="@color/colorTextTitle"
+                android:ems="10"
+                android:fontFamily="@font/avenirnextregular"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@color/colorTextBody1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_peso_edit_familiar" />
+
+            <Button
+                android:id="@+id/btn_create_edit_familiar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/button_custom_background"
+                android:fontFamily="@font/avenirheavy"
+                android:text="@string/editar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_afecciones_edit_familiar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
