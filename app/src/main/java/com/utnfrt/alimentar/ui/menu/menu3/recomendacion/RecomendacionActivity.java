@@ -91,6 +91,7 @@ public class RecomendacionActivity extends BaseActivity implements Recomendacion
         currentPos = 0;
         adapter.notifyDataSetChanged();
         presenter.getMenuRecomendado();
+
     }
 
     @Override
