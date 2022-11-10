@@ -32,7 +32,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Menu3Fragment extends BaseFragment implements Menu3Contract.View ,RecomendacionContract.View{
+public class Menu3Fragment extends BaseFragment implements Menu3Contract.View, RecomendacionContract.View {
 
     private View view;
     @Inject
@@ -175,7 +175,7 @@ public class Menu3Fragment extends BaseFragment implements Menu3Contract.View ,R
 
     @Override
     public void showMenuRecomendado(List<Integer> response) {
-        if (getContext()!=null){
+        if (getContext() != null) {
             rvRecomendacion.setVisibility(View.VISIBLE);
             listIdMenu.addAll(response);
             recomendationPresenter.getMenuComplete(listIdMenu.get(currentPos) + "");
@@ -184,9 +184,9 @@ public class Menu3Fragment extends BaseFragment implements Menu3Contract.View ,R
 
     @Override
     public void showMenuComplete(DetailMenuResponse detailMenuResponse) {
-        if (getContext()!=null){
+        if (getContext() != null) {
             listRecomendation.add(detailMenuResponse.getMenu());
-            currentPos ++;
+            currentPos++;
             adapterRecomendaciones.notifyDataSetChanged();
             if (currentPos < listIdMenu.size()) {
                 recomendationPresenter.getMenuComplete(listIdMenu.get(currentPos) + "");

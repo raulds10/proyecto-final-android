@@ -17,6 +17,8 @@ import com.utnfrt.alimentar.di.SelectVegetalModule;
 import com.utnfrt.alimentar.di.ShowAfeccionesModule;
 import com.utnfrt.alimentar.di.SignupModule;
 
+import io.paperdb.Paper;
+
 public class App extends Application {
 
     private ApplicationComponent component;
@@ -43,6 +45,7 @@ public class App extends Application {
                 .principalApiModule(new PrincipalApiModule())
                 .oAuthModule(new OAuthModule())
                 .build();
+        Paper.init(this);
     }
 
     public ApplicationComponent getComponent() {

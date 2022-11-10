@@ -2,6 +2,8 @@ package com.utnfrt.alimentar.ui.menu.menu1.editarfamilia;
 
 import com.utnfrt.alimentar.R;
 import com.utnfrt.alimentar.ui.base.BasePresenter;
+import com.utnfrt.alimentar.utils.HistorySaver;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
@@ -27,6 +29,7 @@ public class EditFamiliarPresenter <V extends EditFamiliarContract.View> extends
                     public void onNext(Integer message) {
                         getView().finishLoading();
                         if (message == R.string.ok) {
+                            HistorySaver.guardarPesoHistorico(idFamiliar,peso);
                             getView().editOk();
                         }
                         else getView().showError(R.string.error_title_bottom_sheet, message);

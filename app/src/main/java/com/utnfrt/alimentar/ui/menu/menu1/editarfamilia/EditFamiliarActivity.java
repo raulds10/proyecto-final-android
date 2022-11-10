@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.utnfrt.alimentar.R;
@@ -21,6 +23,7 @@ import com.utnfrt.alimentar.di.root.App;
 import com.utnfrt.alimentar.ui.base.BaseActivity;
 import com.utnfrt.alimentar.ui.menu.menu1.crearfamilia.AfeccionEditAdapter;
 import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.afecciones.ShowAfeccionesActivity;
+import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.reporte.ReporteActivity;
 import com.utnfrt.alimentar.utils.DatePickerFragment;
 import com.utnfrt.alimentar.utils.DateUtilities;
 import com.utnfrt.alimentar.utils.StatusBarUtilities;
@@ -50,6 +53,8 @@ public class EditFamiliarActivity extends BaseActivity implements EditFamiliarCo
     Button btnSiguiente;
     @BindView(R.id.rv_afecciones_edit_familiar)
     RecyclerView rvAfecciones;
+    @BindView(R.id.reporteButton)
+    FloatingActionButton reporteButton;
     private AfeccionEditAdapter adapter;
     private GridLayoutManager layoutManager;
     private List<AfeccioneFamiliar> listAfecciones = new ArrayList<>();
@@ -90,6 +95,12 @@ public class EditFamiliarActivity extends BaseActivity implements EditFamiliarCo
     protected void onResume() {
         super.onResume();
         presenter.setView(this);
+    }
+
+    @OnClick(R.id.reporteButton) public void goToReporteActivity(){
+        Intent i = new Intent(getApplicationContext(), ReporteActivity.class);
+        i.putExtra("idFamiliar", f.getIdFamiliar() + "");
+        startActivity(i);
     }
 
     @OnClick(R.id.tv_nueva_afeccion_edit_familiar) public void selectAfeccion(){

@@ -20,7 +20,12 @@
         android:theme="@style/AppTheme.SinActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.menu.menu3.recomendacion.RecomendacionActivity"></activity>
+        <activity
+            android:name=".ui.menu.menu1.editarfamilia.reporte.ReporteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.menu.menu3.recomendacion.RecomendacionActivity" />
         <activity
             android:name=".ui.menu.menu3.detailmenu.DetailMenuActivity"
             android:screenOrientation="portrait" />

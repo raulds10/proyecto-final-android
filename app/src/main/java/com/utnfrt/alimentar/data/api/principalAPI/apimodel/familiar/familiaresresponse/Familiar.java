@@ -2,7 +2,10 @@ package com.utnfrt.alimentar.data.api.principalAPI.apimodel.familiar.familiaresr
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.PesoHistoricoFamiliar;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Familiar {
@@ -25,6 +28,8 @@ public class Familiar {
     @SerializedName("afecciones")
     @Expose
     private List<AfeccioneFamiliar> afecciones = null;
+
+
 
     public Familiar() {}
 
