@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -54,7 +55,7 @@ public class EditFamiliarActivity extends BaseActivity implements EditFamiliarCo
     @BindView(R.id.rv_afecciones_edit_familiar)
     RecyclerView rvAfecciones;
     @BindView(R.id.reporteButton)
-    FloatingActionButton reporteButton;
+    ImageView reporteButton;
     private AfeccionEditAdapter adapter;
     private GridLayoutManager layoutManager;
     private List<AfeccioneFamiliar> listAfecciones = new ArrayList<>();

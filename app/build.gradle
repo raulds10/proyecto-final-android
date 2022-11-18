@@ -72,6 +72,10 @@ dependencies {
 
     //AnyChart
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+
+    //Android Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
     //Paperio
     implementation 'io.github.pilgr:paperdb:2.7.2'
 
