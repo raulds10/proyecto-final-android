@@ -95,7 +95,7 @@ public class Menu3Fragment extends BaseFragment implements Menu3Contract.View, R
             i.putExtra("idMenu", listRecomendation.get(rvRecomendacion.getChildAdapterPosition(v)).getIdMenu() + "");
             startActivity(i);
         });
-        rvRecomendacion.setAdapter(adapter);
+        rvRecomendacion.setAdapter(adapterRecomendaciones);
 
         return view;
     }

@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PrincipalApiModule {
 
     //CAMBIAR DIRECCION IP POR LA QUE CORRESPONDA
-    public final String BASE_URL = "https://proyecto-final-utn-frt.herokuapp.com/api/crud/";
+    public final String BASE_URL = "http://10.0.2.2:3001/api/crud/";
 
     @Provides
     public OkHttpClient provideClient(RepositoryOAuth repo){

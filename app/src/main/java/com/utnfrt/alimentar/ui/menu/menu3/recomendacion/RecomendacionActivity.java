@@ -23,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RecomendacionActivity extends BaseActivity implements RecomendacionContract.View {
+public class  RecomendacionActivity extends BaseActivity implements RecomendacionContract.View {
 
     @Inject
     RecomendacionContract.Presenter presenter;
