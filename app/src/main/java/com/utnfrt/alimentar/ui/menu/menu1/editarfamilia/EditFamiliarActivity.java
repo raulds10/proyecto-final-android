@@ -13,7 +13,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.utnfrt.alimentar.R;
@@ -25,6 +24,7 @@ import com.utnfrt.alimentar.ui.base.BaseActivity;
 import com.utnfrt.alimentar.ui.menu.menu1.crearfamilia.AfeccionEditAdapter;
 import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.afecciones.ShowAfeccionesActivity;
 import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.reporte.ReporteActivity;
+import com.utnfrt.alimentar.ui.menu.menu1.editarfamilia.reporte.ReporteHortalizaActivity;
 import com.utnfrt.alimentar.utils.DatePickerFragment;
 import com.utnfrt.alimentar.utils.DateUtilities;
 import com.utnfrt.alimentar.utils.StatusBarUtilities;
@@ -103,6 +103,12 @@ public class EditFamiliarActivity extends BaseActivity implements EditFamiliarCo
         i.putExtra("idFamiliar", f.getIdFamiliar() + "");
         startActivity(i);
     }
+
+    @OnClick(R.id.reporteHortaliza) public void goToReporteHortalizaActivity(){
+        Intent i = new Intent(getApplicationContext(), ReporteHortalizaActivity.class);
+        startActivity(i);
+    }
+
 
     @OnClick(R.id.tv_nueva_afeccion_edit_familiar) public void selectAfeccion(){
         Intent i = new Intent(getApplicationContext(), ShowAfeccionesActivity.class);

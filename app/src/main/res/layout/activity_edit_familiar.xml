@@ -19,6 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/reporteHortaliza"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_report_svgrepo_com"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_edit_familiar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_edit_familiar" />
+
 
     <TextView
         android:id="@+id/tv_title_edit_familiar"

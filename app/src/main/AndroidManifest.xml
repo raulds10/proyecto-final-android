@@ -21,10 +21,16 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".ui.menu.menu1.editarfamilia.reporte.ReporteHortalizaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.menu.menu1.editarfamilia.reporte.ReporteActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity android:name=".ui.menu.menu3.recomendacion.RecomendacionActivity" />
         <activity
             android:name=".ui.menu.menu3.detailmenu.DetailMenuActivity"
